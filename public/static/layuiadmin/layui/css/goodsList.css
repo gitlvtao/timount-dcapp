@@ -1,0 +1,9 @@
+.cidclick{
+    display: inline-block;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.select {
+    color: #d11010;
+    /*border: 1px solid #d11010;*/
+}

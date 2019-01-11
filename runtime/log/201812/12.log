@@ -1,0 +1,84 @@
+---------------------------------------------------------------
+[ 2018-12-12T09:47:11+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/index/index/getdata
+[运行时间：0.060131s] [吞吐率：16.63req/s] [内存消耗：2,209.78kb] [文件加载：77]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pull_status' in 'where clause'[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-12T09:57:11+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/index/index/getdata
+[运行时间：0.050384s] [吞吐率：19.85req/s] [内存消耗：2,209.17kb] [文件加载：77]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pull_time_register' in 'field list'[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-12T10:03:42+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/index/index/getdata
+[运行时间：0.059650s] [吞吐率：16.76req/s] [内存消耗：2,313.79kb] [文件加载：77]
+[ error ] [8]未定义变量: data[D:\DCAPP\application\index\controller\Index.php:151]
+---------------------------------------------------------------
+[ 2018-12-12T10:33:17+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/blocks/data/index.html?bid=undefined
+[运行时间：0.074337s] [吞吐率：13.45req/s] [内存消耗：2,361.76kb] [文件加载：78]
+[ error ] [0]模板文件不存在:D:\DCAPP\application\blocks\view\data\index.html[D:\DCAPP\thinkphp\library\think\view\driver\Think.php:86]
+---------------------------------------------------------------
+[ 2018-12-12T10:36:01+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/blocks/data/index.html?bid=undefined
+[运行时间：0.072934s] [吞吐率：13.71req/s] [内存消耗：2,361.76kb] [文件加载：78]
+[ error ] [0]模板文件不存在:D:\DCAPP\application\blocks\view\data\index.html[D:\DCAPP\thinkphp\library\think\view\driver\Think.php:86]
+---------------------------------------------------------------
+[ 2018-12-12T10:36:07+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html?bid=13111112217
+[运行时间：0.047899s] [吞吐率：20.88req/s] [内存消耗：2,279.26kb] [文件加载：78]
+[ error ] [0]模板文件不存在:D:\DCAPP\application\reward\view\reward\info.html[D:\DCAPP\thinkphp\library\think\view\driver\Think.php:86]
+---------------------------------------------------------------
+[ 2018-12-12T11:27:18+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html?phone=13111112217
+[运行时间：0.043733s] [吞吐率：22.87req/s] [内存消耗：2,282.02kb] [文件加载：78]
+[ error ] [0]模板文件不存在:info.html[D:\DCAPP\thinkphp\library\think\view\driver\Think.php:86]
+---------------------------------------------------------------
+[ 2018-12-12T11:27:37+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html?phone=13111112217
+[运行时间：0.060184s] [吞吐率：16.62req/s] [内存消耗：2,525.77kb] [文件加载：84]
+[ error ] [8]未定义变量: phone[D:\DCAPP\runtime\temp\fc6f9207c16cd46f514873ade271c439.php:68]
+---------------------------------------------------------------
+[ 2018-12-12T13:38:37+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.078984s] [吞吐率：12.66req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:38:55+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.074609s] [吞吐率：13.40req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:39:51+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.088248s] [吞吐率：11.33req/s] [内存消耗：2,446.59kb] [文件加载：76]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:39:55+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.087028s] [吞吐率：11.49req/s] [内存消耗：2,446.59kb] [文件加载：76]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:40:32+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.087338s] [吞吐率：11.45req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:40:39+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.057854s] [吞吐率：17.28req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:41:04+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.059134s] [吞吐率：16.91req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T13:41:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.066642s] [吞吐率：15.01req/s] [内存消耗：2,447.87kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-12T14:43:34+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.061008s] [吞吐率：16.39req/s] [内存消耗：2,343.63kb] [文件加载：77]
+[ error ] [0]查询表达式错误:array (
+  'pull_phone' => '13111112216',
+)[D:\DCAPP\thinkphp\library\think\db\Builder.php:307]
+---------------------------------------------------------------
+[ 2018-12-12T14:43:41+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059272s] [吞吐率：16.87req/s] [内存消耗：2,343.63kb] [文件加载：77]
+[ error ] [0]查询表达式错误:array (
+  'pull_phone' => '13111112216',
+)[D:\DCAPP\thinkphp\library\think\db\Builder.php:307]
+---------------------------------------------------------------
+[ 2018-12-12T17:59:34+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/sendmoney.html
+[运行时间：0.067187s] [吞吐率：14.88req/s] [内存消耗：2,303.41kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'plat_form' in 'where clause'[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-12T17:59:43+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/sendmoney.html
+[运行时间：0.074521s] [吞吐率：13.42req/s] [内存消耗：2,303.41kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'plat_form' in 'where clause'[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]

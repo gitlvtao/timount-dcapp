@@ -1,0 +1,877 @@
+---------------------------------------------------------------
+[ 2018-11-30T11:52:01+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/index
+[运行时间：0.126899s] [吞吐率：7.88req/s] [内存消耗：2,312.52kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/index',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '75',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006388s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_ads` [ RunTime:0.017380s ]
+[ sql ] [ SQL ] SELECT `a`.* FROM `hgqb_ads` `a` INNER JOIN `hgqb_ad_positions` `p` ON `p`.`positions_id`=`a`.`ad_position_id` WHERE  `a`.`ad_status` = '1'  AND `p`.`positions_ident` = 'banner_index' ORDER BY `a`.`ad_sort` DESC [ RunTime:0.003412s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002117s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.016741s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product` WHERE  `product_status` = 1 [ RunTime:0.001640s ]
+---------------------------------------------------------------
+[ 2018-11-30T11:53:31+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/notice
+[运行时间：0.088889s] [吞吐率：11.25req/s] [内存消耗：2,276.52kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/notice',
+  'route' => 'notice/noticeapi/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '99',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'mjIHhVTvMujCUOX9a3iRFEBZPK0/nm5lzLd/RgQBo1FzDn2yCLg8t2Bo731QWw7nbi3a2UyfEC9aWQycsfglLA==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009830s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_bind_user_notice` [ RunTime:0.006592s ]
+[ sql ] [ SQL ] SELECT `bind_notice_id` FROM `hgqb_bind_user_notice` WHERE  `bind_user_id` = 1 [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009620s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_notice` [ RunTime:0.006451s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_title`,`notice_short_title`,`notice_create_time` FROM `hgqb_notice` WHERE  `notice_id` NOT IN (1,2,3,4,5,8) ORDER BY `notice_create_time` DESC [ RunTime:0.000645s ]
+---------------------------------------------------------------
+[ 2018-11-30T11:53:31+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.044676s] [吞吐率：22.38req/s] [内存消耗：2,254.12kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '99',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010504s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.006499s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000567s ]
+---------------------------------------------------------------
+[ 2018-11-30T11:54:22+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/index
+[运行时间：0.093648s] [吞吐率：10.68req/s] [内存消耗：2,311.96kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/index',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '75',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010092s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_ads` [ RunTime:0.006033s ]
+[ sql ] [ SQL ] SELECT `a`.* FROM `hgqb_ads` `a` INNER JOIN `hgqb_ad_positions` `p` ON `p`.`positions_id`=`a`.`ad_position_id` WHERE  `a`.`ad_status` = '1'  AND `p`.`positions_ident` = 'banner_index' ORDER BY `a`.`ad_sort` DESC [ RunTime:0.000601s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010133s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.006202s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product` WHERE  `product_status` = 1 [ RunTime:0.000735s ]
+---------------------------------------------------------------
+[ 2018-11-30T11:54:32+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.076228s] [吞吐率：13.12req/s] [内存消耗：2,254.12kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '99',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009935s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.006054s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000551s ]
+---------------------------------------------------------------
+[ 2018-11-30T11:54:32+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/notice
+[运行时间：0.048015s] [吞吐率：20.83req/s] [内存消耗：2,276.52kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/notice',
+  'route' => 'notice/noticeapi/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '99',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'mjIHhVTvMujCUOX9a3iRFEBZPK0/nm5lzLd/RgQBo1FzDn2yCLg8t2Bo731QWw7nbi3a2UyfEC9aWQycsfglLA==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010079s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_bind_user_notice` [ RunTime:0.006251s ]
+[ sql ] [ SQL ] SELECT `bind_notice_id` FROM `hgqb_bind_user_notice` WHERE  `bind_user_id` = 1 [ RunTime:0.000551s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000904s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_notice` [ RunTime:0.006172s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_title`,`notice_short_title`,`notice_create_time` FROM `hgqb_notice` WHERE  `notice_id` NOT IN (1,2,3,4,5,8) ORDER BY `notice_create_time` DESC [ RunTime:0.000614s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:02+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/index
+[运行时间：0.076516s] [吞吐率：13.07req/s] [内存消耗：2,312.17kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/index',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '75',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002393s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_ads` [ RunTime:0.007255s ]
+[ sql ] [ SQL ] SELECT `a`.* FROM `hgqb_ads` `a` INNER JOIN `hgqb_ad_positions` `p` ON `p`.`positions_id`=`a`.`ad_position_id` WHERE  `a`.`ad_status` = '1'  AND `p`.`positions_ident` = 'banner_index' ORDER BY `a`.`ad_sort` DESC [ RunTime:0.001009s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010331s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.006590s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product` WHERE  `product_status` = 1 [ RunTime:0.000713s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:17+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/login
+[运行时间：0.045958s] [吞吐率：21.76req/s] [内存消耗：2,284.05kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/login',
+  'route' => 'user/userapi/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '163',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'ER/yQRQdR+8R4IfBxTNz3bfve5xgCaXWW77VK/zZaEkIC+xCxALZKNV1sQsDcixa3xca36D/6dfAaoEyLvSee6h3InemEtvjSCbllOD664PpoVyKfR+fYRhp+Z3SxJkJexUtWLfoiEiIytl/4gwX1Q==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001136s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.007543s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_password`,`user_nickname`,`user_sex`,`user_age`,`user_status` FROM `hgqb_users` WHERE  `user_mobile` = '13222222222' LIMIT 1 [ RunTime:0.000631s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011566s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] UPDATE `hgqb_users`  SET `user_login_time` = 1543568417 , `user_login_ip` = '192.168.0.129'  WHERE  `user_id` = 1 [ RunTime:0.000724s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:21+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.083715s] [吞吐率：11.95req/s] [内存消耗：2,254.33kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '99',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010594s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.006104s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000546s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:21+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/notice
+[运行时间：0.058032s] [吞吐率：17.23req/s] [内存消耗：2,276.85kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/notice',
+  'route' => 'notice/noticeapi/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '99',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'mjIHhVTvMujCUOX9a3iRFEBZPK0/nm5lzLd/RgQBo1FzDn2yCLg8t2Bo731QWw7nbi3a2UyfEC9aWQycsfglLA==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010094s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_bind_user_notice` [ RunTime:0.006271s ]
+[ sql ] [ SQL ] SELECT `bind_notice_id` FROM `hgqb_bind_user_notice` WHERE  `bind_user_id` = 1 [ RunTime:0.000486s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010035s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_notice` [ RunTime:0.006329s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_title`,`notice_short_title`,`notice_create_time` FROM `hgqb_notice` WHERE  `notice_id` NOT IN (1,2,3,4,5,8) ORDER BY `notice_create_time` DESC [ RunTime:0.000646s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:44+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/listTest
+[运行时间：0.054322s] [吞吐率：18.41req/s] [内存消耗：1,520.55kb] [文件加载：69]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/listTest',
+  'route' => 'screen/screenapi/listTest',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '75',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+---------------------------------------------------------------
+[ 2018-11-30T17:00:52+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/article
+[运行时间：0.099205s] [吞吐率：10.08req/s] [内存消耗：2,316.44kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/article',
+  'route' => 'article/articleapi/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '139',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => '0rp9gbVgca9MneK3Vn9dXp1MEnbjz/Nc1gr0xQCf5cxpDdjzqKp0fEa4WiFdqKqRR80STknYohCV75TO6Wsq0Qxa1cuN1OQMQW1z8FSK+nqFzuSisUqHhkgZw7IoSRnO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011524s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.010146s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_thumb`,`article_brief`,`article_comment_num`,`article_zan_num` FROM `hgqb_article` WHERE  `article_is_single` = 0  AND `article_column_id` = 8  AND `article_title` LIKE '%%'  AND `article_attr` = 1 LIMIT 0,5 [ RunTime:0.000923s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010496s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_fabulous_log` [ RunTime:0.009856s ]
+[ sql ] [ SQL ] SELECT `fabulous_object_id` FROM `hgqb_fabulous_log` WHERE  `fabulous_user_id` = 1  AND `fabulous_type` = 1 [ RunTime:0.000776s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:00:52+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/article
+[运行时间：0.065804s] [吞吐率：15.20req/s] [内存消耗：2,316.44kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/article',
+  'route' => 'article/articleapi/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '139',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => '0rp9gbVgca9MneK3Vn9dXp1MEnbjz/Nc1gr0xQCf5cxpDdjzqKp0fEa4WiFdqKqRR80STknYohCV75TO6Wsq0Qxa1cuN1OQMQW1z8FSK+nqFzuSisUqHhkgZw7IoSRnO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011026s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.006153s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_thumb`,`article_brief`,`article_comment_num`,`article_zan_num` FROM `hgqb_article` WHERE  `article_is_single` = 0  AND `article_column_id` = 8  AND `article_title` LIKE '%%'  AND `article_attr` = 1 LIMIT 0,5 [ RunTime:0.000556s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009841s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_fabulous_log` [ RunTime:0.006037s ]
+[ sql ] [ SQL ] SELECT `fabulous_object_id` FROM `hgqb_fabulous_log` WHERE  `fabulous_user_id` = 1  AND `fabulous_type` = 1 [ RunTime:0.000551s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:20:20+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.082571s] [吞吐率：12.11req/s] [内存消耗：2,254.33kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '99',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010364s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.006946s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000495s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:20:27+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/index
+[运行时间：0.067412s] [吞吐率：14.83req/s] [内存消耗：2,312.17kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/index',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '75',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010789s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_ads` [ RunTime:0.006785s ]
+[ sql ] [ SQL ] SELECT `a`.* FROM `hgqb_ads` `a` INNER JOIN `hgqb_ad_positions` `p` ON `p`.`positions_id`=`a`.`ad_position_id` WHERE  `a`.`ad_status` = '1'  AND `p`.`positions_ident` = 'banner_index' ORDER BY `a`.`ad_sort` DESC [ RunTime:0.000626s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000973s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.006390s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product` WHERE  `product_status` = 1 [ RunTime:0.000694s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:20:30+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.068524s] [吞吐率：14.59req/s] [内存消耗：2,254.33kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '99',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001475s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.007384s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000635s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:20:30+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/notice
+[运行时间：0.055573s] [吞吐率：17.99req/s] [内存消耗：2,276.85kb] [文件加载：75]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/notice',
+  'route' => 'notice/noticeapi/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '99',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'mjIHhVTvMujCUOX9a3iRFEBZPK0/nm5lzLd/RgQBo1FzDn2yCLg8t2Bo731QWw7nbi3a2UyfEC9aWQycsfglLA==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001311s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_bind_user_notice` [ RunTime:0.007333s ]
+[ sql ] [ SQL ] SELECT `bind_notice_id` FROM `hgqb_bind_user_notice` WHERE  `bind_user_id` = 1 [ RunTime:0.000492s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010201s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_notice` [ RunTime:0.007140s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_title`,`notice_short_title`,`notice_create_time` FROM `hgqb_notice` WHERE  `notice_id` NOT IN (1,2,3,4,5,8) ORDER BY `notice_create_time` DESC [ RunTime:0.000673s ]
+---------------------------------------------------------------
+[ 2018-11-30T17:20:37+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/faq
+[运行时间：0.053146s] [吞吐率：18.82req/s] [内存消耗：2,243.00kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/faq',
+  'route' => 'article/articleapi/faq',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'content-length' => '75',
+  'user-agent' => 'daichao/1 CFNetwork/902.2 Darwin/17.7.0',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+  'content-type' => 'application/json;charset=utf-8',
+  'host' => '192.168.1.52:51001',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'DOuyqraFoZ3rOEJY6pY5maAWoQb7O/4dW0A4EKYp5lWGbBPEzLX9+qnbl0yh4msO',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001059s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.006052s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_brief` FROM `hgqb_article` WHERE  `article_column_id` = 9 [ RunTime:0.000508s ]
+---------------------------------------------------------------
+[ 2018-11-30T18:00:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/article/articleapi/article
+[运行时间：0.040084s] [吞吐率：24.95req/s] [内存消耗：1,590.47kb] [文件加载：70]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=dd2as52cc05c01b5ks1k412ni5',
+  'host' => 'www.dcapp.com:51001',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'bb4ba785-8410-465d-89e3-70b0a0450868',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'data' => 
+  array (
+    'userId' => '1',
+    'type' => '2',
+  ),
+)
+---------------------------------------------------------------
+[ 2018-11-30T18:01:01+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/article/articleapi/index
+[运行时间：0.069276s] [吞吐率：14.43req/s] [内存消耗：2,291.52kb] [文件加载：71]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=dd2as52cc05c01b5ks1k412ni5',
+  'host' => 'www.dcapp.com:51001',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => 'c7d50c86-727b-4ff5-ba7f-3313632417e7',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'data' => 
+  array (
+    'userId' => '1',
+    'type' => '2',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002629s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.006977s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_thumb`,`article_brief`,`article_comment_num`,`article_zan_num` FROM `hgqb_article` WHERE  `article_is_single` = 0  AND `article_column_id` = 8 ORDER BY `article_sort` ASC,`article_create_time` DESC LIMIT 0,10 [ RunTime:0.000618s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000988s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_fabulous_log` [ RunTime:0.006655s ]
+[ sql ] [ SQL ] SELECT `fabulous_object_id` FROM `hgqb_fabulous_log` WHERE  `fabulous_user_id` = 1  AND `fabulous_type` = 1 [ RunTime:0.000459s ]
+---------------------------------------------------------------
+[ 2018-11-30T18:02:13+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/article/articleapi/index
+[运行时间：0.063132s] [吞吐率：15.84req/s] [内存消耗：2,291.52kb] [文件加载：71]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=dd2as52cc05c01b5ks1k412ni5',
+  'host' => 'www.dcapp.com:51001',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '3af58667-fcea-4a6b-a017-95cbe74f015e',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'data' => 
+  array (
+    'userId' => '1',
+    'type' => '2',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001473s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.006507s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_thumb`,`article_brief`,`article_comment_num`,`article_zan_num` FROM `hgqb_article` WHERE  `article_is_single` = 0  AND `article_column_id` = 8 ORDER BY `article_sort` ASC,`article_create_time` DESC LIMIT 0,10 [ RunTime:0.000707s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010712s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_fabulous_log` [ RunTime:0.008599s ]
+[ sql ] [ SQL ] SELECT `fabulous_object_id` FROM `hgqb_fabulous_log` WHERE  `fabulous_user_id` = 1  AND `fabulous_type` = 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2018-11-30T18:02:56+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/article/articleapi/index
+[运行时间：0.067555s] [吞吐率：14.80req/s] [内存消耗：2,291.52kb] [文件加载：71]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=dd2as52cc05c01b5ks1k412ni5',
+  'host' => 'www.dcapp.com:51001',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '7cff4b2b-e1ee-487f-9fe5-1b914d713ee3',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'data' => 
+  array (
+    'userId' => '1',
+    'type' => '2',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001787s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_article` [ RunTime:0.008156s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`article_thumb`,`article_brief`,`article_comment_num`,`article_zan_num` FROM `hgqb_article` WHERE  `article_is_single` = 0  AND `article_column_id` = 8 ORDER BY `article_sort` ASC,`article_create_time` DESC LIMIT 0,10 [ RunTime:0.000632s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011203s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_fabulous_log` [ RunTime:0.005918s ]
+[ sql ] [ SQL ] SELECT `fabulous_object_id` FROM `hgqb_fabulous_log` WHERE  `fabulous_user_id` = 1  AND `fabulous_type` = 1 [ RunTime:0.000543s ]

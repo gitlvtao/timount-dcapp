@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2018-12-15T16:40:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/pull.html
+[ tmy ] 拉新活动对接记录:[{"pull_phone":"18322222222","pull_type":1,"pull_platform":0,"pull_create_time":1544863207},{"pull_phone":"18322222222","pull_type":1,"pull_platform":"18322222222","pull_create_time":1544863207}]
+---------------------------------------------------------------
+[ 2018-12-15T16:44:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/pull.html
+[ tmy ] 拉新活动对接记录:[{"pull_phone":"13777777777","pull_type":1,"pull_platform":0,"pull_create_time":1544863487},{"pull_phone":"15111111111","pull_type":1,"pull_platform":"13777777777","pull_create_time":1544863487}]
+---------------------------------------------------------------
+[ 2018-12-15T16:47:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/pull.html
+[ tmy ] 拉新活动对接记录:[{"pull_phone":"13555555555","pull_type":1,"pull_platform":0,"pull_create_time":1544863645},{"pull_phone":"15311111111","pull_type":1,"pull_platform":"13555555555","pull_create_time":1544863645}]
+---------------------------------------------------------------
+[ 2018-12-15T16:47:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/pull.html
+[ tmy ] 拉新活动对接记录:[{"pull_phone":"13444444444","pull_type":1,"pull_platform":0,"pull_create_time":1544863645},{"pull_phone":"15311111111","pull_type":1,"pull_platform":"13444444444","pull_create_time":1544863645}]

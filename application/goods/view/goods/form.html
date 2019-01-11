@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 下面是定义标签库 -->
+    <!-- 下面是定义通用的meta头信息 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- 下面是定义通用的变量信息 -->
+    {load href="/static/layuiadmin/layui/css/layui.css,/static/layuiadmin/style/admin.css" /}
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>商品详情</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <!--首页点击人数/人次-->
+                <form class="layui-form layui-form-pane">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">栏目名称</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <select name="product_column_id" lay-verify="required">
+                                <option value="">请选择</option>
+                                {volist name="column" id="vc"}
+                                <option value="{$vc.column_id}" {if condition="$vc.column_id eq $data.product_column_id"}selected="selected"{/if}>{$vc.column_name}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品名称</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_title" value="{$data.product_title}" lay-verify="required"  class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品属性</label>
+                        <div class="layui-input-4" pane>
+                            {volist name="attr" id="attr" key="k"}
+                            <input type="radio" name="product_attr" class="layui-input" value="{$attr.config_id}" title="{$attr.config_title}"{if condition="$attr.config_id eq $data.product_attr"}checked{/if}>
+                            {/volist}
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品链接</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input  autocomplete="off" type="text" name="product_url" value="{$data.product_url}"  placeholder="请输入商品链接" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-field-box">
+                        <legend class="layui-form-label" style="width: 220px">商品主图(82*82px)</legend>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label" style="width: 150px">请上传图片</label>
+                            <input type="hidden" name="product_logo" id="pic" value="{$data.product_logo}">
+                            <div class="layui-input-block">
+                                <div class="layui-upload">
+                                    <button type="button" class="layui-btn layui-btn-primary" id="adBtn"><i class="icon icon-upload3"></i>点击上传</button>
+                                    <div class="layui-upload-list">
+                                        <img class="layui-upload-img" id="adPic" src="{$data.product_logo}">
+                                        <p id="demoText"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" >
+                        <div class="layui-input-4" >
+                            <label class="layui-form-label" style="width: 200px">标签选择</label>
+                            <div class="layui-input-block">
+                                {volist name="labelList" id="vo" key="k"}
+                                <input type="checkbox" name="product_tag[]" value="{$vo.config_id}" title="{$vo.config_title}" {in name="$vo.config_id" value="$data['product_tag']"}checked{/in}>
+                                {/volist}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">最高额度(元)</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input id="time" autocomplete="off" type="text" name="product_max_amount" value="{$data.product_max_amount}" lay-verify="required" placeholder="请输入最高额度" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" >
+                        <label class="layui-form-label" style="width: 200px">利率方式</label>
+                        <div class="layui-input-3 layui-input-block" >
+                            <input type="radio" name="product_interest_type" value="1" title="日利息"  {if condition="$data.product_interest_type eq 1"}checked{/if} >
+                            <input type="radio" name="product_interest_type" value="2" title="月利息"  {if condition="$data.product_interest_type eq 2"}checked{/if} >
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">利率</label>
+                        <div class="layui-input-3" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_interest" value="{$data.product_interest}" lay-verify="required|rate" placeholder="请输入利率" class="layui-input">
+                        </div>
+                        <span style="height: 38px;line-height: 38px;color: #ff0000;">限制0-1间的四位小数</span>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">期限范围</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_term" value="{$data.product_term}"  placeholder="请输入期限范围" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">申请人数</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_apply_people" value="{$data.product_apply_people}"  placeholder="请输入申请人数" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">通过率</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_adopt" lay-verify="required|rate" value="{$data.product_adopt}"  placeholder="请输入通过率" class="layui-input">
+                        </div>
+                        <span style="height: 38px;line-height: 38px;color: #ff0000;">限制0-1间的四位小数</span>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">发放时间</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_grant" lay-verify="required" value="{$data.product_grant}"   placeholder="请输入发放时间" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">利息范围</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <select name="product_interest_range" lay-verify="required">
+                                <option value="">请选择</option>
+                                {volist name="interest_range" id="vi" }
+                                <option value="{$vi.config_id}" {if condition="$vi.config_id eq $data.product_interest_range"}selected="selected"{/if}>{$vi.config_title}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">额度范围</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <select name="product_limit_range" lay-verify="required">
+                                <option value="">请选择</option>
+                                {volist name="limit_range" id="vd" }
+                                <option value="{$vd.config_id}" {if condition="$vd.config_id eq $data.product_limit_range"}selected="selected"{/if}>{$vd.config_title}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">提交</button>
+                            <a href="JavaScript:history.go(-1)" class="layui-btn layui-btn-primary">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{load href="/static/layuiadmin/layui/layui.js,/static/js/tools.js" /}
+<script src="__STATIC__/common/js/jquery.2.1.1.min.js"></script>
+<script>
+    var product_id = "{$data.product_id}";
+    layui.use(['form', 'layer','upload','laydate'], function () {
+        var form = layui.form, $ = layui.jquery, upload = layui.upload;
+        form.on('submit(submit)', function (data) {
+            var loading = layer.load(1, {shade: [0.1, '#fff']});
+            data.field.product_id = product_id;
+            $.post('{:url("editGoods")}',data.field, function(res){
+                layer.close(loading);
+                if (res.code > 0) {
+                    layer.msg(res.msg, {time: 1800, icon: 1}, function () {
+                        location.href = res.url;
+                    });
+                } else {
+                    layer.msg(res.msg, {time: 1800, icon: 2});
+                }
+            });
+        });
+
+        form.verify({
+            rate:function(value,item){
+                if(!new RegExp("0\.?[0-9]+$").test(value)){
+                    return "请输入正确费率！";
+                }
+            }
+        });
+
+
+        //商品主图上传
+        var uploadIn = upload.render({
+            elem: '#adBtn'
+            ,url: '{:url("other/upload/image")}'
+            ,auto: false
+            ,field: 'image'
+            ,accept: 'images'
+            ,acceptMime: 'image/*'
+            ,choose: function(obj) {
+                obj.preview(function(index, file, result) {
+                    var img = new Image();
+                    img.onload = function() {
+                        console.log('choose poster', img.width, img.height);
+                        if (82 == img.width && 82 == img.height) {
+                            $('#adPic').attr('src', result); //图片链接（base64）不支持ie8
+                            obj.upload(index, file);
+                        } else {
+                            layer.msg('图片尺寸必须为：' + 82 + '*' + 82 + 'px');
+                        }
+                    };
+                    img.src = result;
+                });
+            }
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#adPic').attr('src', result); //图片链接（base64）
+                });
+            }
+            ,done: function(res){
+                if(res.code>=0){
+                    $('#pic').val(res.data);
+                }else{
+                    //如果上传失败
+                    return layer.msg('上传失败');
+                }
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+            }
+        });
+    });
+
+</script>

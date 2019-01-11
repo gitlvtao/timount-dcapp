@@ -1,0 +1,2 @@
+解压文件后，建立数据库，登录后台，如果报验证码类错误，使用 composer
+composer require topthink/think-captcha  添加验证码类

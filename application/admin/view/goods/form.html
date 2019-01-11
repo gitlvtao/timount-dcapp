@@ -1,0 +1,203 @@
+{include file="common/head"/}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>商品详情</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <!--首页点击人数/人次-->
+                <form class="layui-form layui-form-pane">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品名称</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_name" value="{$data.product_name}" lay-verify="required"  class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品属性</label>
+                        <div class="layui-input-4" pane>
+                            <input type="radio" name="product_attribute" class="layui-input" value="1" title="无属性" {if condition="$data.product_attribute eq 1"}checked{/if} >
+                            <input type="radio" name="product_attribute" class="layui-input" value="2" title="热门"  {if condition="$data.product_attribute eq 2"}checked{/if} >
+                            <input type="radio" name="product_attribute" class="layui-input" value="3" title="推荐"  {if condition="$data.product_attribute eq 3"}checked{/if} >
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">商品链接</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input  autocomplete="off" type="text" name="product_url" value="{$data.product_url}"  placeholder="{:lang('pleaseEnter')}商品链接" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-field-box">
+                        <legend class="layui-form-label" style="width: 220px">商品主图(82*82px)</legend>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label" style="width: 150px">请上传图片</label>
+                            <input type="hidden" name="product_logo" id="pic" value="{$data.product_logo}">
+                            <div class="layui-input-block">
+                                <div class="layui-upload">
+                                    <button type="button" class="layui-btn layui-btn-primary" id="adBtn"><i class="icon icon-upload3"></i>点击上传</button>
+                                    <div class="layui-upload-list">
+                                        <img class="layui-upload-img" id="adPic" src="{$data.product_logo}">
+                                        <p id="demoText"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" >
+                        <div class="layui-input-4" >
+                            <label class="layui-form-label" style="width: 200px">标签选择</label>
+                            <div class="layui-input-block">
+                                {volist name="labelList" id="vo" key="k"}
+                                <input type="checkbox" name="product_tag[]" value="{$k}" title="{$vo}" {in name="k" value="$data.product_tag"}checked{/in}>
+                                {/volist}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">最高额度(元)</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input id="time" autocomplete="off" type="text" name="product_max_amount" value="{$data.product_max_amount}" lay-verify="required" placeholder="{:lang('pleaseEnter')}最高额度" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" >
+                        <label class="layui-form-label" style="width: 200px">利率方式</label>
+                        <div class="layui-input-3 layui-input-block" >
+                            <input type="radio" name="product_interest_type" value="1" title="日利息"  {if condition="$data.product_interest_type eq 1"}checked{/if} >
+                            <input type="radio" name="product_interest_type" value="2" title="月利息"  {if condition="$data.product_interest_type eq 2"}checked{/if} >
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">利率</label>
+                        <div class="layui-input-3" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_interest" value="{$data.product_interest}" lay-verify="required|rate" placeholder="{:lang('pleaseEnter')}利率" class="layui-input">
+                        </div>
+                        <span style="height: 38px;line-height: 38px;color: #ff0000;">限制0-1间的四位小数</span>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">期限范围</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_term" value="{$data.product_term}"  placeholder="{:lang('pleaseEnter')}期限范围" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">申请人数</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_apply_people" value="{$data.product_apply_people}"  placeholder="{:lang('pleaseEnter')}申请人数" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">通过率</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_adopt" lay-verify="required|rate" value="{$data.product_adopt}"  placeholder="{:lang('pleaseEnter')}通过率" class="layui-input">
+                        </div>
+                        <span style="height: 38px;line-height: 38px;color: #ff0000;">限制0-1间的四位小数</span>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">发放时间</label>
+                        <div class="layui-input-4" style="width: 600px;float: left;">
+                            <input autocomplete="off" type="text" name="product_grant" lay-verify="required" value="{$data.product_grant}"   placeholder="请输入发放时间" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">提交</button>
+                            <a href="JavaScript:history.go(-1)" class="layui-btn layui-btn-primary">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file="common/foot"/}
+<script src="__STATIC__/common/js/jquery.2.1.1.min.js"></script>
+<script>
+    var product_id = {$data.product_id};
+    layui.use(['form', 'layer','upload','laydate'], function () {
+        var form = layui.form, $ = layui.jquery, upload = layui.upload;
+        form.on('submit(submit)', function (data) {
+            var loading = layer.load(1, {shade: [0.1, '#fff']});
+            data.field.product_id = product_id;
+            $.post('{:url("editGoods")}',data.field, function(res){
+                layer.close(loading);
+                if (res.code > 0) {
+                    layer.msg(res.msg, {time: 1800, icon: 1}, function () {
+                        location.href = res.url;
+                    });
+                } else {
+                    layer.msg(res.msg, {time: 1800, icon: 2});
+                }
+            });
+        });
+
+        form.verify({
+            rate:function(value,item){
+                if(!new RegExp("0\.?[0-9]+$").test(value)){
+                    return "请输入正确费率！";
+                }
+            }
+        });
+
+
+        //商品主图上传
+        var uploadIn = upload.render({
+            elem: '#adBtn'
+            ,url: '{:url("UpFiles/upload")}'
+            ,auto: false
+            ,choose: function(obj) {
+                obj.preview(function(index, file, result) {
+                    var img = new Image();
+                    img.onload = function() {
+                        console.log('choose poster', img.width, img.height);
+                        if (82 == img.width && 82 == img.height) {
+                            $('#adPic').attr('src', result); //图片链接（base64）不支持ie8
+                            obj.upload(index, file);
+                        } else {
+                            layer.msg('图片尺寸必须为：' + 82 + '*' + 82 + 'px');
+                        }
+                    };
+                    img.src = result;
+                });
+            }
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#adPic').attr('src', result); //图片链接（base64）
+                });
+            }
+            ,done: function(res){
+                if(res.code>0){
+                    $('#pic').val(res.url);
+                }else{
+                    //如果上传失败
+                    return layer.msg('上传失败');
+                }
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+            }
+        });
+    });
+
+</script>

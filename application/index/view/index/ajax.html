@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <sapn id="abc">这是一个神奇的按钮</sapn>
+</form>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e) {
+        $("#abc").click(function () {
+            var abc = {
+                'data': 'oxd98lGtPbkzzRfJvKzlal/ImiBJNmrDBXTQpsIk00FhhdSAV6eGcwv+wQ26iGrYerLr3ObeA4MKOGxfpszT6x/OenGpfNdPrb1LK3hy483O3w9xUcC74ERJzULjAFDuCUb+/SoN+WJ6Alxq649fUI2KtJAJVRydkz3EQm2EmYY= 0.035002s ShowPageTrace',
+            };
+            $.post('http://192.168.1.123:47012/abc', abc, function (data) {
+                console.log(data);
+            })
+        })
+    });
+</script>
+</body>
+</html>

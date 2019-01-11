@@ -1,0 +1,180 @@
+---------------------------------------------------------------
+[ 2018-11-23T17:56:14+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/product
+[运行时间：0.156032s] [吞吐率：6.41req/s] [内存消耗：2,682.64kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/product',
+  'route' => 'goods/goodsapi/products',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.11.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '163',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => '1/vF5vYo7qY/75RGu/5krB3zWID1FuEfWfmJWu9rZOCdeNBoG9sC53rG1Cw7dkGEDg+oeaB19H45O6+PMy1wbPfMI9e7M8GMJiNWgfZPiG2+os5MCMrN2C5Mloh6fSeLJ36bDDTwE3RuEMwlwqAWOg==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010427s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_collect_log` [ RunTime:0.005619s ]
+[ sql ] [ SQL ] SELECT `collect_object_id` FROM `hgqb_collect_log` WHERE  `collect_user_id` = 1  AND `collect_type` = 1 [ RunTime:0.000531s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010556s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_column` [ RunTime:0.005552s ]
+[ sql ] [ SQL ] SELECT `column_name`,`column_banner`,`column_summary` FROM `hgqb_column` WHERE  `column_id` = 0 LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009716s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.005632s ]
+[ sql ] [ SQL ] SELECT `product_id`,`product_title`,`product_logo`,`product_interest_type`,`product_interest`,`product_term`,`product_max_amount`,`product_tag`,`product_url`,`product_grant` FROM `hgqb_product` WHERE  `product_attr` = 27 LIMIT 0,10 [ RunTime:0.000540s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010480s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product_attr_config` [ RunTime:0.005343s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000533s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010072s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000502s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010395s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000950s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011700s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000980s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011683s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000965s ]
+---------------------------------------------------------------
+[ 2018-11-23T17:56:15+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/product
+[运行时间：0.238911s] [吞吐率：4.19req/s] [内存消耗：3,009.21kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/product',
+  'route' => 'goods/goodsapi/products',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.11.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '163',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => '1/vF5vYo7qY/75RGu/5krB3zWID1FuEfWfmJWu9rZOBHVIAiua3HtO/k1ggbzd1vUcoecAN/FStsnBk0oCht/rbh/WfalFT0GOJzAupy1UQQ4eiba8zOSvE139JLIrH/PARDiMBDdHWe6eHvEm0kVw==',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010470s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_collect_log` [ RunTime:0.006625s ]
+[ sql ] [ SQL ] SELECT `collect_object_id` FROM `hgqb_collect_log` WHERE  `collect_user_id` = 1  AND `collect_type` = 1 [ RunTime:0.000633s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011420s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_column` [ RunTime:0.006725s ]
+[ sql ] [ SQL ] SELECT `column_name`,`column_banner`,`column_summary` FROM `hgqb_column` WHERE  `column_id` = 0 LIMIT 1 [ RunTime:0.000587s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011299s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product` [ RunTime:0.006278s ]
+[ sql ] [ SQL ] SELECT `product_id`,`product_title`,`product_logo`,`product_interest_type`,`product_interest`,`product_term`,`product_max_amount`,`product_tag`,`product_url`,`product_grant` FROM `hgqb_product` ORDER BY `product_id` DESC LIMIT 0,10 [ RunTime:0.000614s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009740s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_product_attr_config` [ RunTime:0.005578s ]
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000525s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009657s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011360s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000401s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010427s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000454s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010476s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000547s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010186s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000538s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010486s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000591s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010274s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000524s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010306s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000536s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010671s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `hgqb_product_attr_config` WHERE  `config_pid` = 1  AND `config_status` <> -1 [ RunTime:0.000522s ]
+---------------------------------------------------------------
+[ 2018-11-23T17:56:27+08:00 ] 192.168.1.18 POST 192.168.1.52:51001/api/userInfo
+[运行时间：0.074475s] [吞吐率：13.43req/s] [内存消耗：2,245.55kb] [文件加载：74]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api/userInfo',
+  'route' => 'user/userapi/userInfo',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'aes',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.11.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '192.168.1.52:51001',
+  'content-length' => '99',
+  'content-type' => 'application/json;charset=utf-8',
+  'accept' => 'application/json, text/plain, */*',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'O4EXTSfcDV1RG4MB5EGXIzu5I+Hl5MUqUK2/BI+iZvGdob0K4JrA5TQcgjDzsRKqbs7RtMuwruIkWJbevYuXHA==',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010269s ] mysql:host=127.0.0.1;dbname=hgqb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hgqb_users` [ RunTime:0.005659s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_mobile`,`user_headpic`,`user_nickname`,`user_sex`,`user_age` FROM `hgqb_users` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000501s ]

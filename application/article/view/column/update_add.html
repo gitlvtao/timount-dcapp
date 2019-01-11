@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 下面是定义标签库 -->
+    <!-- 下面是定义通用的meta头信息 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- 下面是定义通用的变量信息 -->
+    {load href="/static/layuiadmin/layui/css/layui.css,/static/layuiadmin/style/admin.css" /}
+    <title></title>
+</head>
+<body>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <form class="layui-form" action="" lay-filter="layui-business-form">
+                <div class="layui-form-item layui-row">
+                    <div class="layui-col-sm6">
+                        <div class="layui-col-sm6">
+                            <label class="layui-form-label">上级栏目</label>
+                            <div class="layui-input-block">
+                                <select name="columnId" lay-vertype="tips" lay-filter="select-broker-level">
+                                    <option value="">请选择</option>
+                                    {volist name="column" id="column"}
+                                    <option value="{$column.column_id}" {notempty name="$info.column_pid"}{eq name="$column.column_id" value="$info.column_pid"}selected{/eq}{/notempty}>{$column.column_name}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-row" >
+                    <div class="layui-col-sm6">
+                        <label class="layui-form-label"><span class="required">*</span>栏目名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" lay-verify="required" lay-vertype="tips" autocomplete="off" placeholder="请输入广告名称" class="layui-input" value="{notempty name="$info.column_name"}{$info.column_name}{/notempty}">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-row">
+                    <div class="layui-col-sm6">
+                        <label class="layui-form-label">缩略图</label>
+                        <input type="hidden" name="thumbimage" value=""/>
+                        <div class="layui-input-block">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="upload_thumb_img_btn">上传</button>
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="thumb_url" src="{notempty name="$info.column_thumb"}{$info.column_thumb}{/notempty}" onerror="this.src='/static/img/nopicture.gif';this.onerror=null" style="width: 240px; height: 180px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-sm6">
+                        <label class="layui-form-label">Banner图</label>
+                        <input type="hidden" name="bannerimage" value=""/>
+                        <div class="layui-input-block">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="upload_banner_img_btn">上传</button>
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="banner_url" src="{notempty name="$info.column_banner"}{$info.column_banner}{/notempty}" onerror="this.src='/static/img/nopicture.gif';this.onerror=null" style="width: 240px; height: 180px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">栏目简要</label>
+                    <div class="layui-input-block">
+                        <textarea name="brief" placeholder="请输入文章简要" class="layui-textarea">{notempty name="$info.column_summary"}{$info.column_summary}{/notempty}</textarea>
+                    </div>
+                </div>
+
+                <!-- 提交 -->
+                <div class="layui-form-item layui-layout-admin">
+                    <div class="layui-input-block">
+                        <div class="layui-footer" style="left: 0; z-index: 10001">
+                            <input type="hidden" name="aid" value="{notempty name="$info.column_id"}{$info.column_id}{/notempty}"/>
+                            <button class="layui-btn" lay-submit="" lay-filter="layui-business-submit">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{load href="/static/layuiadmin/layui/layui.js,/static/js/tools.js" /}
+<script>
+    layui.config({
+        base: '/static/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'form', 'upload'], function(){
+        var $ = layui.$
+            ,form = layui.form
+            ,upload = layui.upload;
+
+        // 文件上传
+        upload.render({
+            elem: '#upload_banner_img_btn',
+            url: '{:url("other/upload/image")}',
+            field: 'image',
+            accept: 'images',
+            acceptMime: 'image/*',
+            before: function(obj){
+                layer.load(1);
+            },
+            done: function(res){
+                layer.closeAll('loading');
+                if (res.code == 0) {
+                    $("#banner_url").attr("src", res.data);
+                    $("input[name='bannerimage']").val(res.data);
+                } else {
+                    return layer.msg('上传失败');
+                }
+            },
+            error: function(){
+                layer.closeAll('loading');
+            }
+        });
+
+        // 文件上传
+        upload.render({
+            elem: '#upload_thumb_img_btn',
+            url: '{:url("other/upload/image")}',
+            field: 'image',
+            accept: 'images',
+            acceptMime: 'image/*',
+            before: function(obj){
+                layer.load(1);
+            },
+            done: function(res){
+                layer.closeAll('loading');
+                if (res.code == 0) {
+                    $("#thumb_url").attr("src", res.data);
+                    $("input[name='thumbimage']").val(res.data);
+                } else {
+                    return layer.msg('上传失败');
+                }
+            },
+            error: function(){
+                layer.closeAll('loading');
+            }
+        });
+
+        /* 监听提交 */
+        form.on('submit(layui-business-submit)', function(data){
+            layer.load(1);
+            console.log(data.field);
+            $.post('{:url("article/column/updateadd")}',data.field,function(result){
+                layer.closeAll('loading');
+                if (result.code == 0) {
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                    parent.tableIns.reload();
+                    parent.layer.msg("操作成功",{icon: 1});
+                } else {
+                    layer.msg(result.msg,{icon: 2});
+                }
+            },"json");
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>

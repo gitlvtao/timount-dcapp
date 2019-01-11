@@ -1,0 +1,109 @@
+{include file="common/head"/}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>标签管理</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <div class="demoTable">
+                    <a id="addLable" class="layui-btn layui-btn-normal" style="float:left;"><i class="fa fa-plus" aria-hidden="true"></i>添加标签</a>
+                </div>
+                <!--<table class="layui-table" id="list" lay-filter="list"></table>-->
+            </div>
+            </br></br></br></br></br></br>
+            <div>
+                <div style="padding-bottom: 50px;">
+                    {volist name="list" id="vo"}
+                    <span class="cidclick" id="cidclick" style="border: 1px solid #e2e2e4;border-radius:10px;height: auto;margin-left:20px;margin-top:20px;">{$vo}</span>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="common/foot"/}
+<script>
+    layui.use(['table','form'], function() {
+        var table = layui.table,form = layui.form,$ = layui.jquery;
+
+        $(".cidclick").on("click",function(){
+            var lable = $(this).html();
+            layer.open({
+                title:'标签信息'
+                ,content:'<input type="text" class="form-control" value="' +lable + '">'
+                ,btn:['编辑','删除']
+                ,yes:function(){
+                    var tag =  $(".form-control").val();
+                    $.post("{:url('editLable')}",{value:lable,tag:tag},function(res){
+                        if(res.code == 1){
+                            layer.msg(res.msg,{time: 1000, icon: 1},function(){
+                                location.reload();
+                                layer.closeAll();
+                            })
+                        }else{
+                            layer.msg(res.msg,{time: 1000, icon: 2},function(){
+                                location.reload();
+                                layer.closeAll();
+                            })
+                        }
+                    })
+                }
+                ,btn2:function(){
+                    $.post("{:url('delLable')}",{value:lable},function(res){
+                        if(res.code == 1){
+                            layer.msg(res.msg,{time: 1000, icon: 1},function(){
+                                location.reload();
+                                layer.closeAll();
+                            })
+                        }else{
+                            layer.msg(res.msg,{time: 1000, icon: 2},function(){
+//                                location.reload();
+                                layer.closeAll();
+                            })
+                        }
+                    })
+                }
+            })
+        });
+
+        $("#addLable").on("click",function(){
+            layer.open({
+                title:"添加标签"
+                ,area:'auto'
+                ,content: '<div class="layui-form-item layui-row">'+
+                        '<label class="layui-form-label" >标签名称</label>'+
+                        '<div class="layui-input-4">'+
+                        '<input autocomplete="off" type="text"  name="tag_name"  placeholder="请输入标签名称" class="layui-input tag_name">'+
+                        '</div>'+
+                        '</div>'
+                ,btn:['添加','取消']
+                ,yes:function(){
+                    var tag = $(".tag_name").val();
+                    $.post("{:url('addLable')}",{tag:tag},function(res){
+                        if(res.code === 1){
+                            layer.msg(res.msg,{time: 1000, icon: 1},function(){
+                                location.reload();
+                                layer.closeAll();
+                            })
+                        }else{
+                            layer.msg(res.msg,{time: 1000, icon: 2},function(){
+//                                location.reload();
+                                layer.closeAll();
+                            })
+                        }
+                    })
+                }
+                ,btn2:function(){
+                    layer.closeAll();
+                }
+            })
+        })
+
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+---------------------------------------------------------------
+[ 2018-12-05T09:21:02+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/jpush/push/push
+[运行时间：0.044012s] [吞吐率：22.72req/s] [内存消耗：2,261.32kb] [文件加载：76]
+[ error ] [0]方法参数错误:msg[D:\DCAPP\thinkphp\library\think\Container.php:454]
+---------------------------------------------------------------
+[ 2018-12-05T11:48:17+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.053580s] [吞吐率：18.66req/s] [内存消耗：2,269.94kb] [文件加载：78]
+[ error ] [0]模板文件不存在:D:\DCAPP\application\jpush\view\push\add_push.html[D:\DCAPP\thinkphp\library\think\view\driver\Think.php:86]
+---------------------------------------------------------------
+[ 2018-12-05T11:56:40+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.073033s] [吞吐率：13.69req/s] [内存消耗：2,298.03kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T11:56:57+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.059391s] [吞吐率：16.84req/s] [内存消耗：2,297.94kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T12:00:16+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.054937s] [吞吐率：18.20req/s] [内存消耗：2,297.94kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T12:33:13+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.055777s] [吞吐率：17.93req/s] [内存消耗：2,297.88kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T12:36:05+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.049035s] [吞吐率：20.39req/s] [内存消耗：2,297.88kb] [文件加载：79]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T12:43:17+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.059802s] [吞吐率：16.72req/s] [内存消耗：2,515.26kb] [文件加载：86]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T12:43:28+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.055664s] [吞吐率：17.96req/s] [内存消耗：2,515.26kb] [文件加载：86]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hgqb.hgqb_push_notice' doesn't exist[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-05T17:41:26+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/jpush/push/addpush.html
+[运行时间：0.033709s] [吞吐率：29.67req/s] [内存消耗：1,546.34kb] [文件加载：69]
+[ error ] [0]语法解析错误: syntax error, unexpected '$param' (T_VARIABLE)[D:\DCAPP\application\jpush\controller\Push.php:75]
+---------------------------------------------------------------
+[ 2018-12-05T18:39:17+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/jpush/push/editpush.html?id=1
+[运行时间：0.056369s] [吞吐率：17.74req/s] [内存消耗：2,567.61kb] [文件加载：82]
+[ error ] [8]Use of undefined constant data - assumed 'data'[D:\DCAPP\runtime\temp\a03399d91d5a66e8a0dbf310ce0254e3.php:47]

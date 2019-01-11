@@ -1,0 +1,153 @@
+{include file="common/head"/}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>用户信息</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <div class="demoTable">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <select name="city" lay-verify="" id="index_media_name" lay-search>
+                                    <option value="all">查询所有</option>
+                                    {$sel_media|raw}
+                                </select>
+                            </div>
+                            <div class="layui-inline" style="width: 200px;"> <!-- 注意：这一层元素并不是必须的 -->
+                                <input autocomplete="off" type="text" class="layui-input" id="index_date"
+                                       placeholder="请选择日期">
+                            </div>
+                            <button class="layui-btn" id="index_pvuv_search" data-type="reload">查询
+                            </button>
+                            <a class="layui-btn download_excel" id="index_pvuv_export" data-type="reload"
+                            >导出excel</a>
+                        </div>
+                    </form>
+                </div>
+                <table class="layui-table" id="index_pvuv_table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="common/foot"/}
+<script type="text/html" id="indexid">
+    {{d.LAY_INDEX}}
+</script>
+<script type="text/html" id="media_mt">
+    {{# if(d.media_name==null){ }}
+    -
+    {{# }else{ }}
+    {{d.media_name}}
+    {{# }}}
+</script>
+<script type="text/html" id="media_model_mt">
+    {{# if(d.media_model==null){ }}
+    -
+    {{# }else{ }}
+    {{d.media_model}}
+    {{# }}}
+</script>
+<script type="text/html" id="media_commodity_mt">
+    {{# if(d.media_commodity==null){ }}
+    -
+    {{# }else{ }}
+    {{d.media_commodity}}
+    {{# }}}
+</script>
+<script>
+    layui.use(['table', 'layer', 'laydate'], function () {
+        var table = layui.table, $ = layui.jquery, laydate = layui.laydate;
+        //首页PV/UV日期
+        laydate_render("index_date");
+        //首页PV/UV查询
+        $("#index_pvuv_search").on("click", function () {
+            var index_media_name = $("#index_media_name").val();
+            var index_date = $("#index_date").val();
+            indexPvUv.reload({
+                url: '{:URL("getUserDataCenter")}',
+                method: 'post',
+                where: {
+                    index_media_name: index_media_name,
+                    index_date: index_date
+                },
+                done: function (res, curr, count) {
+                    console.log(res);
+                }
+            });
+            return false;
+        });
+        //首页PV/UV表格
+        var indexPvUv = table.render({
+            elem: '#index_pvuv_table',
+            url: '{:url("getUserDataCenter")}',
+            method: 'post',
+            where: {
+                index_media_name: "all",
+            },
+            page: true,
+            limit: 10,
+            cols: [[
+                {title: '编号', align: 'center', width: 60, templet: '#indexid'},
+                {field: 'media_date', title: '日期', align: 'center', width: 160},
+                {field: 'media_where', title: '消耗渠道', align: 'center', width: 120},
+                {field: 'media_name', title: '媒体', align: 'center', width: 120, templet: '#media_mt'},
+                {field: 'media_model', title: '模块', align: 'center', width: 120,templet:'#media_model_mt'},
+                {field: 'media_commodity', title: '商品', align: 'center', width: 350,templet:'#media_commodity_mt'},
+                {field: 'u_name', title: '姓名', align: 'center', width: 120},
+                {field: 'u_tel', title: '电话', align: 'center', width: 120},
+                {field: 'u_no', title: '身份证号', align: 'center', width: 200}
+            ]],
+            done: function (res, curr, count) {
+                console.log(res);
+            }
+        });
+
+        //id_name:id名称
+        function laydate_render(id_name) {
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#' + id_name, //指定元素
+                type: 'date',//日期类型
+                range: "~", //分隔符
+                max: 0,
+                extrabtns: [
+                    {id: 'today', text: '今天', range: [new Date(), new Date()]},
+                    {
+                        id: 'yesterday',
+                        text: '昨天',
+                        range: [new Date(new Date().setDate(new Date().getDate() - 1)), new Date(new Date().setDate(new Date().getDate() - 1))]
+                    },
+                    {
+                        id: 'lastday-7',
+                        text: '近一周',
+                        range: [new Date(new Date().setDate(new Date().getDate() - 7)), new Date(new Date().setDate(new Date().getDate() - 1))]
+                    },
+                    {
+                        id: 'lastday-30',
+                        text: '近一月',
+                        range: [new Date(new Date().setDate(new Date().getDate() - 30)), new Date(new Date().setDate(new Date().getDate() - 1))]
+                    },
+                ],
+                done: function (value, date, endDate) {
+                    //日期区间为一个月
+                    date_arr = value.split("~");
+                    start_time = Date.parse(date_arr[0]) / 1000;
+                    end_time = Date.parse(date_arr[1]) / 1000;
+                    if (end_time - start_time > 2678400) {
+                        layer.msg("日期区间为一个月", {icon: "0"});
+                        return false;
+                    }
+                }
+            });
+        }
+
+        //导出excel
+        $(".download_excel").on('click', function () {
+            $(".download_excel").attr("href", "{:url('getUserDownExcel')}?index_media_name=" + $('#index_media_name').val() + "&index_date=" + $('#index_date').val());
+        });
+    })
+</script>

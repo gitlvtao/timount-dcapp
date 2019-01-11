@@ -1,0 +1,56 @@
+---------------------------------------------------------------
+[ 2018-12-11T15:44:20+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/sign
+[运行时间：0.039842s] [吞吐率：25.10req/s] [内存消耗：1,552.63kb] [文件加载：71]
+[ error ] [2]implode(): Argument must be an array[D:\DCAPP\application\index\controller\Index.php:141]
+---------------------------------------------------------------
+[ 2018-12-11T15:48:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.063896s] [吞吐率：15.65req/s] [内存消耗：2,317.56kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T15:51:48+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.043135s] [吞吐率：23.18req/s] [内存消耗：2,325.23kb] [文件加载：78]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4294967295' for key 'pull_phone'[D:\DCAPP\thinkphp\library\think\db\Connection.php:783]
+---------------------------------------------------------------
+[ 2018-12-11T15:59:19+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.069624s] [吞吐率：14.36req/s] [内存消耗：2,325.27kb] [文件加载：78]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4294967295' for key 'pull_phone'[D:\DCAPP\thinkphp\library\think\db\Connection.php:783]
+---------------------------------------------------------------
+[ 2018-12-11T16:06:43+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.074819s] [吞吐率：13.37req/s] [内存消耗：2,325.27kb] [文件加载：78]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4294967295' for key 'pull_phone'[D:\DCAPP\thinkphp\library\think\db\Connection.php:783]
+---------------------------------------------------------------
+[ 2018-12-11T16:09:45+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.045742s] [吞吐率：21.86req/s] [内存消耗：2,317.58kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:17:31+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.059499s] [吞吐率：16.81req/s] [内存消耗：2,317.55kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:17:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.037870s] [吞吐率：26.41req/s] [内存消耗：2,317.55kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:19:39+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.025609s] [吞吐率：39.05req/s] [内存消耗：1,608.50kb] [文件加载：69]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:20:02+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.021283s] [吞吐率：46.99req/s] [内存消耗：1,608.50kb] [文件加载：69]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:20:21+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.025254s] [吞吐率：39.60req/s] [内存消耗：1,608.50kb] [文件加载：69]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:23:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.021570s] [吞吐率：46.36req/s] [内存消耗：1,608.65kb] [文件加载：69]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-11T16:49:41+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.063618s] [吞吐率：15.72req/s] [内存消耗：2,325.25kb] [文件加载：78]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13111112217' for key 'pull_phone'[D:\DCAPP\thinkphp\library\think\db\Connection.php:783]
+---------------------------------------------------------------
+[ 2018-12-11T16:53:05+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/user/pullnew
+[运行时间：0.050013s] [吞吐率：19.99req/s] [内存消耗：2,317.55kb] [文件加载：75]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]

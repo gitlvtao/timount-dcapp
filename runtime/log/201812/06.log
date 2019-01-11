@@ -1,0 +1,36 @@
+---------------------------------------------------------------
+[ 2018-12-06T10:03:29+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.218340s] [吞吐率：4.58req/s] [内存消耗：2,564.48kb] [文件加载：85]
+[ error ] [8100]name is invalid[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T10:03:47+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.061738s] [吞吐率：16.20req/s] [内存消耗：2,354.78kb] [文件加载：78]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-06T10:04:16+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.182460s] [吞吐率：5.48req/s] [内存消耗：2,564.49kb] [文件加载：85]
+[ error ] [8100]name is invalid[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T10:05:03+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.058149s] [吞吐率：17.20req/s] [内存消耗：2,353.74kb] [文件加载：77]
+[ error ] [0]语法解析错误: syntax error, unexpected '$res' (T_VARIABLE)[D:\DCAPP\extend\fuk\JgPush.php:58]
+---------------------------------------------------------------
+[ 2018-12-06T10:05:23+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：3.219450s] [吞吐率：0.31req/s] [内存消耗：2,564.50kb] [文件加载：85]
+[ error ] [8100]name is invalid[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T10:06:30+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.214470s] [吞吐率：4.66req/s] [内存消耗：2,564.50kb] [文件加载：85]
+[ error ] [8100]name is invalid[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T10:10:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/push.html
+[运行时间：0.208401s] [吞吐率：4.80req/s] [内存消耗：2,564.91kb] [文件加载：85]
+[ error ] [8100]trigger->periodical->end[2018-12-05 00:00:00] is invalid, it's in before now.[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T14:00:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/editpush.html
+[运行时间：0.206948s] [吞吐率：4.83req/s] [内存消耗：2,557.95kb] [文件加载：86]
+[ error ] [8100]Delete target task c72d7062-f918-11e8-a892-fa163e8eb280 was not be found[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]
+---------------------------------------------------------------
+[ 2018-12-06T14:00:35+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/jpush/push/editpush.html
+[运行时间：0.203555s] [吞吐率：4.91req/s] [内存消耗：2,557.95kb] [文件加载：86]
+[ error ] [8100]Delete target task c72d7062-f918-11e8-a892-fa163e8eb280 was not be found[D:\DCAPP\vendor\jpush\jpush\src\JPush\Http.php:130]

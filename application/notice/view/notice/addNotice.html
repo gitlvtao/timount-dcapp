@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 下面是定义标签库 -->
+    <!-- 下面是定义通用的meta头信息 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- 下面是定义通用的变量信息 -->
+    {load href="/static/layuiadmin/layui/css/layui.css,/static/layuiadmin/style/admin.css" /}
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>添加消息</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <form class="layui-form layui-form-pane">
+                    <div class="layui-form-item layui-row">
+                        <label class="layui-form-label" style="width: 200px">消息名称</label>
+                        <div class="layui-input-4" style="float: left;width: 600px;">
+                            <input autocomplete="off" type="text" name="notice_title" value="" lay-verify="required" placeholder="请输入消息名称" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-row">
+                        <label class="layui-form-label" style="width: 200px">消息短内容</label>
+                        <div class="layui-input-4" style="float: left;width: 600px;">
+                            <input autocomplete="off" type="text" name="notice_short_title" value="" lay-verify="required" placeholder="请输入消息短内容" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-row">
+                        <label class="layui-form-label" style="width: 200px">消息内容</label>
+                        <div class="layui-input-4" id="editor" style="float: left;width: 1000px;">
+
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item layui-layout-admin">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">提交</button>
+                            <a href="{:url('index')}" class="layui-btn layui-btn-primary">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{load href="/static/layuiadmin/layui/layui.js,/static/js/tools.js" /}
+<script type="text/javascript" src="__STATIC__/js/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    // 配置服务器端地址
+    editor.customConfig.uploadImgServer = '{:url("other/upload/image")}';
+    // 限制一次最多上传 1 张图片
+    editor.customConfig.uploadImgMaxLength = 1;
+    // 自定义上传参数
+    editor.customConfig.uploadFileName = 'image';
+    editor.customConfig.uploadImgHeaders = {
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+    };
+    editor.customConfig.uploadImgHooks = {
+        // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+        // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+        customInsert: function (insertImg, result, editor, layer) {
+            // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+            // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+            // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+            // result 必须是一个 JSON 格式字符串！！！否则报错
+            if (result.code == 0) {
+                var url = result.data;
+                insertImg(url);
+            } else {
+                layer.msg('上传失败');
+            }
+        }
+    }
+    editor.create();
+
+    layui.use(['form', 'layer','upload'], function () {
+        var form = layui.form, $ = layui.jquery, upload = layui.upload;
+        form.on('submit(submit)', function (data) {
+            var loading = layer.load(1, {shade: [0.1, '#fff']});
+            data.field.notice_content = editor.txt.html();
+            $.post("{:url('addNotice')}", data.field, function (res) {
+                layer.close(loading);
+                if (res.code > 0) {
+                    layer.msg(res.msg, {time: 1800, icon: 1}, function () {
+                        location.href = res.url;
+                    });
+                } else {
+                    layer.msg(res.msg, {time: 1800, icon: 2});
+                }
+            });
+        });
+
+    });
+
+</script>

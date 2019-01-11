@@ -1,0 +1,44 @@
+---------------------------------------------------------------
+[ 2018-12-17T09:08:10+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060467s] [吞吐率：16.54req/s] [内存消耗：2,483.27kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-17T11:33:50+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/index/index/columnIndex
+[运行时间：0.028314s] [吞吐率：35.32req/s] [内存消耗：1,568.05kb] [文件加载：70]
+[ error ] [0]variable type error： array[D:\DCAPP\thinkphp\library\think\Response.php:390]
+---------------------------------------------------------------
+[ 2018-12-17T13:36:00+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/user/user/phpexcel.html
+[运行时间：0.069582s] [吞吐率：14.37req/s] [内存消耗：2,348.30kb] [文件加载：78]
+[ error ] [8]未定义数组索引: pid[D:\DCAPP\application\user\controller\User.php:90]
+---------------------------------------------------------------
+[ 2018-12-17T13:36:30+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/user/user/phpexcel.html
+[运行时间：0.092550s] [吞吐率：10.80req/s] [内存消耗：4,468.71kb] [文件加载：123]
+[ error ] [8]未定义数组索引: user_mobile[D:\DCAPP\extend\fuk\Excel.php:34]
+---------------------------------------------------------------
+[ 2018-12-17T14:20:01+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/user/user/phpexcel.html
+[运行时间：0.078682s] [吞吐率：12.71req/s] [内存消耗：3,907.01kb] [文件加载：113]
+[ error ] [8]未定义变量: objExcel[D:\DCAPP\extend\fuk\Excel.php:19]
+---------------------------------------------------------------
+[ 2018-12-17T14:20:12+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/user/user/phpexcel.html
+[运行时间：0.074232s] [吞吐率：13.47req/s] [内存消耗：3,907.01kb] [文件加载：113]
+[ error ] [8]未定义变量: objExcel[D:\DCAPP\extend\fuk\Excel.php:19]
+---------------------------------------------------------------
+[ 2018-12-17T14:52:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.075760s] [吞吐率：13.20req/s] [内存消耗：2,483.28kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-17T14:52:59+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.057122s] [吞吐率：17.51req/s] [内存消耗：2,483.28kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-17T15:58:29+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/article/comment?data=yWb6h6rDxU8bVJ68kE1G1TIwnor8g1obfmGS70/nazlOD42CAmDTo3osPoKehOVJGX0wW5LgFsAFeeqgfcwUsEqlWun0o/1l2Crikf2YTZJaOx/qRBkq4ZH1Lqeq7Ttvmv5vzrzORRTvKjttLVsv0A==
+[运行时间：0.031661s] [吞吐率：31.58req/s] [内存消耗：1,549.48kb] [文件加载：72]
+[ error ] [0]类型错误: Argument 1 passed to fuk\DataCrypt::decrypt() must be of the type string, array given, called in D:\DCAPP\application\http\middleware\DecryptRequestData.php on line 28[D:\DCAPP\extend\fuk\DataCrypt.php:38]
+---------------------------------------------------------------
+[ 2018-12-17T16:01:50+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/article/comment?data=yWb6h6rDxU8bVJ68kE1G1TIwnor8g1obfmGS70/nazlOD42CAmDTo3osPoKehOVJGX0wW5LgFsAFeeqgfcwUsEqlWun0o/1l2Crikf2YTZJaOx/qRBkq4ZH1Lqeq7Ttvmv5vzrzORRTvKjttLVsv0A==
+[运行时间：0.026705s] [吞吐率：37.45req/s] [内存消耗：1,549.48kb] [文件加载：72]
+[ error ] [0]类型错误: Argument 1 passed to fuk\DataCrypt::decrypt() must be of the type string, array given, called in D:\DCAPP\application\http\middleware\DecryptRequestData.php on line 29[D:\DCAPP\extend\fuk\DataCrypt.php:38]
+---------------------------------------------------------------
+[ 2018-12-17T18:05:35+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.073908s] [吞吐率：13.53req/s] [内存消耗：2,483.28kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]

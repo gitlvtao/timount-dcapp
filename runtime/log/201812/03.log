@@ -1,0 +1,42 @@
+---------------------------------------------------------------
+[ 2018-12-03T10:22:08+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/de
+[运行时间：0.063255s] [吞吐率：15.81req/s] [内存消耗：1,512.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\DCAPP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'de',
+  'route' => 'index/index/de',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '169',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=dd2as52cc05c01b5ks1k412ni5',
+  'host' => 'www.dcapp.com:51001',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'postman-token' => '985591e6-5f87-423a-95ab-67c8936792e1',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'gfz8/nbfcpgIApiN0LcVIHe8Y4K8iEN2pLy2oV8NzCArptesAsN4S4BYOsTPiADj3IPoXRD9pviN3pX9ooXwQQwVz512fHg38AxBdTaQojBHUXvz/3rs0B5B06/ZbG9kbAyXRnjM/BQpa6nt824arg==',
+)
+---------------------------------------------------------------
+[ 2018-12-03T11:44:50+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/browse
+[运行时间：0.030015s] [吞吐率：33.32req/s] [内存消耗：1,586.61kb] [文件加载：75]
+[ error ] [0]致命错误: Call to undefined method app\goods\validate\Goods::scene()[D:\DCAPP\application\goods\controller\Goodsapi.php:69]
+---------------------------------------------------------------
+[ 2018-12-03T12:25:42+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/user/userapi/userBrowse
+[运行时间：0.075702s] [吞吐率：13.21req/s] [内存消耗：2,359.03kb] [文件加载：76]
+[ error ] [8]未定义变量: info[D:\DCAPP\application\user\controller\Userapi.php:86]
+---------------------------------------------------------------
+[ 2018-12-03T17:20:02+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/api/product
+[运行时间：0.223429s] [吞吐率：4.48req/s] [内存消耗：3,044.10kb] [文件加载：80]
+[ error ] [8192]Non-static method think\Log::write() should not be called statically[D:\DCAPP\application\goods\controller\Goodsapi.php:261]

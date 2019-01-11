@@ -1,0 +1,123 @@
+{include file="common/head"/}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>添加广告</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <!--首页点击人数/人次-->
+                <form class="layui-form layui-form-pane">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">选择位置</label>
+                        <div class="layui-input-4" style="float: left;width: 600px;">
+                            <select name="banner_addres" lay-filter="banner_addres">
+                                <option value='1'>首页Banner轮播图</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告链接</label>
+                        <div class="layui-input-4" style="float: left;width: 600px;">
+                            <input type="text" name="banner_url"  placeholder="广告链接地址" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px">广告轮播图(690px*300px)</label>
+                        <input type="hidden" name="banner_image" id="pic" value="{{field.advertiser_logo}}">
+                        <div class="layui-input-block">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn layui-btn-primary" id="adBtn"><i class="icon icon-upload3"></i>点击上传</button>
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="adPic">
+                                    <p id="demoText"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button type="button" class="layui-btn" lay-submit="" lay-filter="auth">立即提交</button>
+                            <a href="{:url('index')}" class="layui-btn layui-btn-primary">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="common/foot"/}
+
+<script>
+    layui.use(['form', 'layer','upload','laydate'], function () {
+        var form = layui.form, $ = layui.jquery, upload = layui.upload;
+        // 设置默认图片
+        $('#pic').val("http://pavgdkyqv.bkt.clouddn.com/advertiser_logo.png");
+        if($('#pic').val() !== ''){
+            $("#adPic").attr("src", "http://pavgdkyqv.bkt.clouddn.com/advertiser_logo.png");
+        }
+        form.on('submit(auth)', function (data) {
+            // 提交到方法 默认为本身
+            $.post("{:url('addBanner')}",data.field,function(res){
+                if(res.code > 0){
+                    layer.msg(res.msg,{time:1000,icon:1},function(){
+                        location.href = res.url;
+                    });
+                }else{
+                    layer.msg(res.msg,{time:1000,icon:2});
+                }
+            });
+        });
+
+        //普通图片上传
+        var posterWidth = 690, posterHeight = 300;
+        var uploadInst = upload.render({
+            elem: '#adBtn'
+            ,url: '{:url("UpFiles/upload")}'
+            ,auto: false
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#adPic').attr('src', result); //图片链接（base64）
+                });
+            }
+            ,choose: function(obj) {
+                obj.preview(function(index, file, result) {
+                    var img = new Image();
+                    img.onload = function() {
+                        console.log('choose poster', img.width, img.height);
+                        if (posterWidth == img.width && posterHeight == img.height) {
+                            $('#adPic').attr('src', result); //图片链接（base64）不支持ie8
+                            obj.upload(index, file);
+                        } else {
+                            layer.msg('图片尺寸必须为：' + posterWidth + 'x' + posterHeight + 'px');
+                        }
+                    };
+                    img.src = result;
+                });
+            }
+            ,done: function(res){
+                if(res.code>0){
+                    $('#pic').val(res.url);
+                }else{
+                    //如果上传失败
+                    return layer.msg('上传失败');
+                }
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+            }
+        });
+    });
+</script>

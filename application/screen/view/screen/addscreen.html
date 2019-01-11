@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 下面是定义标签库 -->
+    <!-- 下面是定义通用的meta头信息 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- 下面是定义通用的变量信息 -->
+    {load href="__STATIC__/layuiadmin/layui/css/layui.css,__STATIC__/layuiadmin/style/admin.css" /}
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title></title>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <form class="layui-form" action="" lay-filter="layui-business-form">
+                <input type="hidden" name="id" value="{notempty name='$info.config_id'}{$info.config_id}{else}0{/notempty}"/>
+                <div class="layui-form-item layui-row">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label"><span class="required">*</span>菜单名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" lay-verify="required" lay-vertype="tips" autocomplete="off" placeholder="请输入菜单名称" class="layui-input" value="{notempty name='$info'}{$info.config_title}{/notempty}">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-row">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">父级菜单</label>
+                        <div class="layui-input-block">
+                            <select name="pid" {eq name="$info.config_pid" value="0"}disabled="disabled"{/eq}>
+                                <option value="0"></option>
+                                {volist name="screen" id="father"}
+                                    <option value="{$father.config_id}" {if condition="$father.config_id eq $info.config_pid"}selected="selected"{/if} >{$father.config_title}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 提交 -->
+                <div class="layui-form-item layui-layout-admin">
+                    <div class="layui-input-block">
+                        <div class="layui-footer" style="left: 0;">
+                            <button class="layui-btn" lay-submit="" lay-filter="layui-business-submit">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{load href="__STATIC__/layuiadmin/layui/layui.js,__STATIC__/js/tools.js" /}
+<script>
+    layui.config({
+        base: '__STATIC__/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'form', 'laydate'], function(){
+        var $ = layui.$
+            ,form = layui.form;
+        /* 监听提交 */
+        form.on('submit(layui-business-submit)', function(data){
+            layer.load(1);
+            $.post('{:url("addScreen")}',data.field,function(result){
+                layer.closeAll('loading');
+                if (result.code == 0) {
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                    parent.renderTable();
+                    parent.layer.msg("操作成功",{icon: 1});
+                } else {
+                    layer.msg(result.msg,{icon: 2});
+                }
+            },"json");
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+---------------------------------------------------------------
+[ 2018-12-15T14:53:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.080443s] [吞吐率：12.43req/s] [内存消耗：2,464.05kb] [文件加载：80]
+[ error ] [8]未定义数组下标: 1[D:\DCAPP\thinkphp\library\think\db\Builder.php:375]
+---------------------------------------------------------------
+[ 2018-12-15T14:53:30+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059520s] [吞吐率：16.80req/s] [内存消耗：2,464.06kb] [文件加载：80]
+[ error ] [8]未定义数组下标: 1[D:\DCAPP\thinkphp\library\think\db\Builder.php:375]
+---------------------------------------------------------------
+[ 2018-12-15T14:54:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063674s] [吞吐率：15.71req/s] [内存消耗：2,464.11kb] [文件加载：80]
+[ error ] [8]未定义数组下标: 1[D:\DCAPP\thinkphp\library\think\db\Builder.php:375]
+---------------------------------------------------------------
+[ 2018-12-15T14:55:26+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059773s] [吞吐率：16.73req/s] [内存消耗：2,461.23kb] [文件加载：79]
+[ error ] [0]查询表达式错误:'pull_platform'[D:\DCAPP\thinkphp\library\think\db\Builder.php:311]
+---------------------------------------------------------------
+[ 2018-12-15T14:55:49+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.054729s] [吞吐率：18.27req/s] [内存消耗：2,461.23kb] [文件加载：79]
+[ error ] [0]查询表达式错误:'pull_phone'[D:\DCAPP\thinkphp\library\think\db\Builder.php:311]
+---------------------------------------------------------------
+[ 2018-12-15T14:56:22+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.056431s] [吞吐率：17.72req/s] [内存消耗：2,464.11kb] [文件加载：80]
+[ error ] [8]未定义数组下标: 1[D:\DCAPP\thinkphp\library\think\db\Builder.php:375]
+---------------------------------------------------------------
+[ 2018-12-15T15:12:48+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064862s] [吞吐率：15.42req/s] [内存消耗：2,415.71kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:12:53+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.073730s] [吞吐率：13.56req/s] [内存消耗：2,415.64kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:13:00+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064150s] [吞吐率：15.59req/s] [内存消耗：2,415.64kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:13:40+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059097s] [吞吐率：16.92req/s] [内存消耗：2,415.64kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:15:38+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.056311s] [吞吐率：17.76req/s] [内存消耗：2,415.64kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:16:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060850s] [吞吐率：16.43req/s] [内存消耗：2,415.64kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:19:03+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.077639s] [吞吐率：12.88req/s] [内存消耗：2,415.62kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:19:49+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.038502s] [吞吐率：25.97req/s] [内存消耗：2,410.95kb] [文件加载：82]
+[ error ] [8]未定义变量: phone[D:\DCAPP\runtime\temp\fc6f9207c16cd46f514873ade271c439.php:28]
+---------------------------------------------------------------
+[ 2018-12-15T15:20:11+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.056707s] [吞吐率：17.63req/s] [内存消耗：2,535.51kb] [文件加载：84]
+[ error ] [8]未定义变量: phone[D:\DCAPP\runtime\temp\fc6f9207c16cd46f514873ade271c439.php:28]
+---------------------------------------------------------------
+[ 2018-12-15T15:20:54+08:00 ] 127.0.0.1 GET www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.049158s] [吞吐率：20.34req/s] [内存消耗：2,410.95kb] [文件加载：82]
+[ error ] [8]未定义变量: phone[D:\DCAPP\runtime\temp\fc6f9207c16cd46f514873ade271c439.php:28]
+---------------------------------------------------------------
+[ 2018-12-15T15:21:22+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063640s] [吞吐率：15.71req/s] [内存消耗：2,415.61kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:22:14+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.062576s] [吞吐率：15.98req/s] [内存消耗：2,415.66kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:24:33+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.066605s] [吞吐率：15.01req/s] [内存消耗：2,415.61kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:24:38+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063171s] [吞吐率：15.83req/s] [内存消耗：2,415.61kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:27:27+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.061721s] [吞吐率：16.20req/s] [内存消耗：2,416.54kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:37:24+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060307s] [吞吐率：16.58req/s] [内存消耗：2,477.52kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:38:11+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059005s] [吞吐率：16.95req/s] [内存消耗：2,477.82kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:41:52+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060719s] [吞吐率：16.47req/s] [内存消耗：2,477.84kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:41:56+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.065627s] [吞吐率：15.24req/s] [内存消耗：2,477.84kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:43:20+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.086092s] [吞吐率：11.62req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:43:31+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.072814s] [吞吐率：13.73req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:44:22+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.081386s] [吞吐率：12.29req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:47:43+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.065979s] [吞吐率：15.16req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:47:54+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.080312s] [吞吐率：12.45req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:52:18+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.070868s] [吞吐率：14.11req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:57:35+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.071752s] [吞吐率：13.94req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T15:58:50+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.079904s] [吞吐率：12.52req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:03:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.072719s] [吞吐率：13.75req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:04:05+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.082307s] [吞吐率：12.15req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:05:10+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.071559s] [吞吐率：13.97req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:05:36+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.069033s] [吞吐率：14.49req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:08:38+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.086360s] [吞吐率：11.58req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:11:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.083135s] [吞吐率：12.03req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:15:40+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060069s] [吞吐率：16.65req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:15:56+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.074848s] [吞吐率：13.36req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:17:15+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.074415s] [吞吐率：13.44req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:17:47+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.065245s] [吞吐率：15.33req/s] [内存消耗：2,478.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:22:13+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.060945s] [吞吐率：16.41req/s] [内存消耗：2,478.77kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:23:28+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064177s] [吞吐率：15.58req/s] [内存消耗：2,478.77kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:40:00+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.065989s] [吞吐率：15.15req/s] [内存消耗：2,480.22kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:49:05+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.072938s] [吞吐率：13.71req/s] [内存消耗：2,480.23kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:49:09+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.068986s] [吞吐率：14.50req/s] [内存消耗：2,480.23kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:49:33+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.073883s] [吞吐率：13.53req/s] [内存消耗：2,480.22kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:51:01+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.083898s] [吞吐率：11.92req/s] [内存消耗：2,480.22kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:57:23+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.077134s] [吞吐率：12.96req/s] [内存消耗：2,481.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:57:33+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.069690s] [吞吐率：14.35req/s] [内存消耗：2,481.30kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T16:58:18+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.085236s] [吞吐率：11.73req/s] [内存消耗：2,481.36kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:01:57+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.078803s] [吞吐率：12.69req/s] [内存消耗：2,484.49kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:02:18+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063607s] [吞吐率：15.72req/s] [内存消耗：2,484.49kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:02:57+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.074493s] [吞吐率：13.42req/s] [内存消耗：2,484.79kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:06+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.075425s] [吞吐率：13.26req/s] [内存消耗：2,484.87kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:08+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.079465s] [吞吐率：12.58req/s] [内存消耗：2,484.87kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:22+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.073517s] [吞吐率：13.60req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:27+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.068549s] [吞吐率：14.59req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:30+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.082224s] [吞吐率：12.16req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:04:34+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.066299s] [吞吐率：15.08req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:05:36+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.059178s] [吞吐率：16.90req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:05:40+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.075832s] [吞吐率：13.19req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:06:01+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.070445s] [吞吐率：14.20req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:06:20+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.070614s] [吞吐率：14.16req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:07:46+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.062824s] [吞吐率：15.92req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:08:20+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.086906s] [吞吐率：11.51req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:13:21+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064956s] [吞吐率：15.40req/s] [内存消耗：2,484.59kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:14:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.068043s] [吞吐率：14.70req/s] [内存消耗：2,484.54kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:15:07+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064520s] [吞吐率：15.50req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:15:40+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063325s] [吞吐率：15.79req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:15:46+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.064609s] [吞吐率：15.48req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:16:03+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.057263s] [吞吐率：17.46req/s] [内存消耗：2,483.75kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:18:09+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.065402s] [吞吐率：15.29req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:19:41+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.069144s] [吞吐率：14.46req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:19:45+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.066163s] [吞吐率：15.11req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:20:01+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.076825s] [吞吐率：13.02req/s] [内存消耗：2,484.58kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T17:29:58+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/rewardinfo.html
+[运行时间：0.056914s] [吞吐率：17.57req/s] [内存消耗：2,493.07kb] [文件加载：81]
+[ error ] [8]未定义数组索引: type[D:\DCAPP\application\reward\controller\Reward.php:146]
+---------------------------------------------------------------
+[ 2018-12-15T17:58:06+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/sendmoney.html
+[运行时间：0.047904s] [吞吐率：20.88req/s] [内存消耗：2,295.53kb] [文件加载：78]
+[ error ] [2]Invalid argument supplied for foreach()[D:\DCAPP\application\reward\controller\Reward.php:93]
+---------------------------------------------------------------
+[ 2018-12-15T17:58:08+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/sendmoney.html
+[运行时间：0.043793s] [吞吐率：22.83req/s] [内存消耗：2,295.53kb] [文件加载：78]
+[ error ] [2]Invalid argument supplied for foreach()[D:\DCAPP\application\reward\controller\Reward.php:93]
+---------------------------------------------------------------
+[ 2018-12-15T18:03:03+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/sendmoney.html
+[运行时间：0.057275s] [吞吐率：17.46req/s] [内存消耗：2,356.47kb] [文件加载：77]
+[ error ] [0]缺少更新条件[D:\DCAPP\thinkphp\library\think\db\Connection.php:1136]
+---------------------------------------------------------------
+[ 2018-12-15T18:07:15+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.063199s] [吞吐率：15.82req/s] [内存消耗：2,483.28kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]
+---------------------------------------------------------------
+[ 2018-12-15T18:07:41+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.061591s] [吞吐率：16.24req/s] [内存消耗：2,483.28kb] [文件加载：81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1[D:\DCAPP\thinkphp\library\think\db\Connection.php:699]

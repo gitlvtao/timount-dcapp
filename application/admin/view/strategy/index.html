@@ -1,0 +1,145 @@
+{include file="common/head"/}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card">
+            <div class="layui-btn-group">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>攻略管理</legend>
+                </fieldset>
+            </div>
+            <div class="layui-btn-table">
+                <div class="layui-form-item">
+                    <a href="{:url('addStrategy')}" class="layui-btn layui-btn">添加攻略</a>
+                    <a href="{:url('index')}" class="layui-btn layui-btn">显示全部</a>
+                    <div style="float: right">
+                        <div class="layui-inline">
+                            <input class="layui-input" name="key" id="key" autocomplete="off" placeholder="输入你要查询的媒体名称或攻略标题"
+                                   style="width: 400px">
+                        </div>
+                        <button class="layui-btn" id="search" data-type="reload">搜索</button>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">属性设置：</label>
+                    <a href="#" class="layui-btn layui-btn" onclick="operation(1)" >热门</a>
+                    <a href="#" class="layui-btn layui-btn" onclick="operation(2)">推荐</a>
+                    <a href="#" class="layui-btn layui-btn" onclick="operation(0)">无属性</a>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">排序规则：</label>
+                    <a href="#" class="layui-btn layui-btn" onclick="sortList(0)">综合</a>
+                    <a href="#" class="layui-btn layui-btn" onclick="sortList(1)">评论数</a>
+                    <a href="#" class="layui-btn layui-btn" onclick="sortList(2)">点赞数</a>
+                    <a href="#" class="layui-btn layui-btn layui-btn-danger" onclick="operation(-1)" style="float: right;">删除选中</a>
+                </div>
+
+                <table class="layui-table" id="list" lay-filter="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="banner_image">
+    {{#  if(d.strategy_img != ""){ }}
+    <img src="{{d.strategy_img}}">
+    {{#  } }}
+</script>
+
+<script type="text/html" id="action">
+    <a href="{:url('editStrategy')}?id={{d.strategy_id}}" class="layui-btn layui-btn-xs">编辑</a>
+    <a href="{:url('discuss')}?id={{d.strategy_id}}" class="layui-btn layui-btn-xs">用户评论</a>
+    {{#  if(d.strategy_type === 1){ }}
+    <a class="layui-btn layui-btn-xs layui-btn-warm">热门</a>
+    {{#  }else if(d.strategy_type === 0){ }}
+    <a class="layui-btn layui-btn-xs">无属性</a>
+    {{# }else{ }}
+    <a class="layui-btn layui-btn-xs layui-btn-normal">推荐</a>
+    {{#  } }}
+</script>
+<script type="text/html" id="sort">
+    <input name="{{d.strategy_id}}" data-id="{{d.strategy_id}}" class="list_order layui-input" value="{{d.strategy_sort}}" size="10"/>
+</script>
+{include file="common/foot"/}
+<script>
+    layui.use(['table', 'form'], function () {
+        var table = layui.table, form = layui.form, $ = layui.jquery;
+        tableIn = table.render({
+            id:'strategy',
+            elem: '#list',
+            url: '{:url("index")}',
+            method: 'post',
+            page: true,
+            cols: [[
+                {checkbox: true, fixed: true},
+                {field: 'time',align:'center', title: '时间', width: 200},
+                {field: 'strategy_title',align:'center', title: '攻略标题', width: 200},
+                {field: 'strategy_content', align: 'center', title: '攻略内容', width: 300},
+                {field: 'strategy_img', align: 'center', title: '攻略图片', width: 200, templet: '#banner_image'},
+                {field: 'strategy_url', align: 'center', title: '攻略链接', width: 200,},
+                {field: 'num', align: 'center', title: '评论数', width: 100,},
+                {field: 'strategy_love', align: 'center', title: '点赞数', width: 100,},
+                {field: 'strategy_sort', title: '排序', width: 100,sort:true,templet:'#sort',fixed:'right'},
+                {width: 200, title: '操作', align: 'center', toolbar: '#action',fixed:'right'}
+            ]]
+        });
+
+        //搜索
+        $('#search').on('click', function () {
+            var key = $('#key').val();
+            if ($.trim(key) === '') {
+                layer.msg('{:lang("pleaseEnter")}关键字！', {icon: 0});
+                return;
+            }
+            tableIn.reload({
+                where: {key: key}
+            });
+        });
+
+        //操作公共方法
+        operation = function(type){
+            var checkStatus = table.checkStatus('strategy'); //idTest 即为基础参数 id 对应的值
+            // console.log(checkStatus.data) //获取选中行的数据
+            var ids = [];
+            $(checkStatus.data).each(function (i, o) {
+                ids.push(o.strategy_id);
+            });
+            if(ids == ''){
+                layer.msg('请选择要操作的数据!');
+                return false;
+            }
+            $.post('{:url("operation")}',{data:ids,type:type},function(res){
+                if(res.code > 0){
+                    layer.msg(res.msg,{time: 1800, icon: 1});
+                    tableIn.reload();
+                }else{
+                    layer.msg(res.msg, {time: 1800, icon: 2});
+                }
+            });
+            return false;
+        };
+
+        //按规则排序数据表内容
+        sortList = function(type){
+            tableIn.reload({
+                where:{type:type}
+            })
+        };
+
+
+
+        //排序
+        $('body').on('blur', '.list_order', function () {
+            var id = $(this).attr('data-id');
+            console.log(id);
+            var sort = $(this).val();
+            $.post('{:url("sortStrategy")}', {id: id, sort: sort}, function (res) {
+                if (res.code == 1) {
+                    layer.msg(res.msg, {time: 1000, icon: 1}, function () {
+                        tableIn.reload();
+                    });
+                } else {
+                    layer.msg(res.msg, {time: 1000, icon: 2});
+                }
+            })
+        })
+    })
+</script>

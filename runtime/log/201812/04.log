@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2018-12-04T18:15:41+08:00 ] 192.168.1.123 POST 192.168.1.23:51001/api/page?data=1jbOvIhSviB+sbzaDPctki6caL2C67msbYJUd/gNHt/RVklDemz3HrYv2Xa7AX8N2EmRdA3OXw7v3POmV6WE2Uhk31V7aesu0AU9eqKciwo/LR2jqf0+dkUYD3qDkA6eUvg+DEYuInrAyUFkLjwhH4a5e1rMLgPA4yKodjoBVn3qOieewJQDu7DOr8gyaojO
+[运行时间：0.038492s] [吞吐率：25.98req/s] [内存消耗：1,564.98kb] [文件加载：76]
+[ error ] [2]mkdir(): No such file or directory[D:\DCAPP\extend\fuk\LogFlow.php:18]

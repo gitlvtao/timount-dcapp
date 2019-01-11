@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+[ 2018-12-13T09:10:25+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.052517s] [吞吐率：19.04req/s] [内存消耗：2,481.35kb] [文件加载：81]
+[ error ] [2]call_user_func_array() expects parameter 1 to be a valid callback, class 'think\Collection' does not have a method 'select'[D:\DCAPP\thinkphp\library\think\Paginator.php:436]
+---------------------------------------------------------------
+[ 2018-12-13T09:10:34+08:00 ] 127.0.0.1 POST www.dcapp.com:51001/reward/reward/info.html
+[运行时间：0.055050s] [吞吐率：18.17req/s] [内存消耗：2,481.36kb] [文件加载：81]
+[ error ] [2]call_user_func_array() expects parameter 1 to be a valid callback, class 'think\Collection' does not have a method 'select'[D:\DCAPP\thinkphp\library\think\Paginator.php:436]
